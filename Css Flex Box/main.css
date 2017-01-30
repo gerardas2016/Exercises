@@ -1,0 +1,121 @@
+main{
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav {
+	max-width: 960px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto
+	display: in-block; /* fixed meniu*/
+	position: fixed;
+	text-align: center;
+	
+	
+	
+}
+
+.navigation {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    background: darkgreen;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+} 
+
+/* Meniu changing color*/
+ul {
+    list-style-type: none;
+    margin:auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkseagreen;
+    width: 100%;
+	
+	
+	
+    
+}
+
+li {
+   /* float: left;*/
+	display:inline;
+
+}
+
+li a {
+    /*display: block;*/
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    text-align: center;
+    width: 80px;
+	display:inline-block;
+
+    
+}
+
+li a:hover:not(.active) {
+    background-color: darkcyan;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+h1 {
+    text-align: center;
+}
+
+
+
+/* Flex, interactive */
+
+.flex-a{
+	display: flex;
+	background-color: grey;
+	flex-wrap: wrap;
+}
+
+.box{
+	min-width: 100px;
+	height: 600px;
+	flex-grow: 1;
+}
+
+.box-hf{
+	min-width: 100px;
+	height: 50px;
+	flex-grow: 1;
+	background: grey;
+	text-align: center;
+}
+
+
+.b1{
+	background: yellow;
+	order: 1;
+	flex: 1 4 15%;
+}
+
+.b2{
+	background: red;
+	order: 3;
+	flex: 1 1 35%;
+	
+}
+.b3 {
+	background: magenta;
+	order: 2;
+	flex: 1 1 35%;
+}
+.b4{
+	background: green;
+	order: 4;
+	flex: 1 4 15%;
+}
+
