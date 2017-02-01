@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js_project</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link href= "style1.css" rel="stylesheet" type="text/css"> 
+	<script src="Jsscript.js" rel="stylesheet" type="text/javascript" ></script>
+
+</head>
+<body>
+	<main>
+		<header>
+		<img class="logo" src= "images/logo1.png" height= "200" >
+			
+		
+		
+		
+			<nav>
+				<ul class="menu">
+					<li  id="copy1" onmouseover="mouseEnter()" onmouseleave="mouseLeave()" > <a href="index1.html">Home</a></li> 
+					<li  id="copy2" onmouseover="mouseEnter()" onmouseleave="mouseLeave()"> <a href="portrait1.html">Portraits</a></li> 
+					<li  id="copy3" onmouseover="mouseEnter()" onmouseleave="mouseLeave()"> <a href="contact1.html">Contact</a></li>
+					<li  id="copy5" onmouseover="mouseEnter()" onmouseleave="mouseLeave()" onclick="birth()"> <a href="#"> Nude</a></li>
+					
+					<li  id="copy4" onmouseover="mouseEnter()" onmouseleave="mouseLeave()"onclick="password()" > <a href="#"> Admin</a></li>
+					
+				</ul>
+			</nav>
+			
+			</header>
+			
+			
+			<article>
+					 <div  class='con' >
+				
+								<p>Name : </p> 
+								<p> <input id="fname" type="text" name="name"  onblur="uperCase()" value= ''/> </p>
+								<p>Email: </p> 
+								<p> <input type="email" name="email" ></p><br> 
+								
+								
+								<p> Select photoshoot</p>
+						<select>
+							  <option value="...">.....</option>
+							  <option value="portrait" onclick='price()' >Portraits</option>
+							  <option value="wedding" onclick='price2()'>Wedding</option>
+						</select>
+								<p id='price'></p> <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!  -->
+								<p> Ask The Question </p>
+								<p> <textarea  onfocus="backroundQ(this)" name="Write something"> </textarea> </p>
+								
+						
+								<p> <input id="f" type="submit" value="Send" onclick="form2()"> </p>
+					</div>
+			</article>
+			
+			<footer>
+			<div class="rss">
+				<a href="#" class="big"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/1.png" alt="picture" width="24" height="24" /></a> 
+				<a href="#" class="big"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/2.png" alt="picture" width="24" height="24" /></a> 
+				<a href="#" class="big"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/3.png" alt="picture" width="24" height="24" /></a> 
+				<a href="#" class="big"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/rss_4.gif" alt="picture" width="24" height="24" /></a>
+
+			</div>
+		
+			<div id="copy" onmouseover="mouseEnter()" onmouseleave="mouseLeave()" >
+			<p>&copy Gerardas Butkevičius 2016</p>
+			
+			
+			<div>
+		</footer>
+		
+	</main>
+</body>

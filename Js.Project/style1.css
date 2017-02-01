@@ -1,0 +1,144 @@
+body {
+	background-color: #111;
+}
+
+main{
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	display: flex;
+	display: block;
+	padding: 20px 20px 20px 20px;
+	
+}
+
+header{
+	padding-top: 20px;
+	background-color: black;
+	max-width: 270px;
+	float: left;
+	
+		
+}
+
+nav{
+	
+	max-width: 260px;
+	padding-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	float: left;
+	display: inline;
+	
+}
+
+
+aside{
+	
+	max-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+article{
+	
+	;
+	max-width: 630px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 300px;
+	
+	
+}
+
+
+
+
+	
+.menu{
+	
+    display: inline-block;
+    display: flex;
+	flex-wrap: wrap;
+	
+	
+	
+}
+.menu a{
+	text-decoration: none;
+	color: #4d4d4d;
+	text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: .7em;
+	display: flex;
+	flex-wrap: wrap;
+	/*lenteles apipavidalinimas*/
+    
+    
+    padding-right: 20px;
+    padding-left: 20px;
+    text-transform: uppercase;
+	
+}
+	
+	
+.rss{
+	border: none;
+	padding-top: 30px;
+	padding-bottom: 40px;
+	float: right;
+	
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	
+	
+	/* nuima taskus nuo grupavimo*/
+  /* list-style-type: none;
+    min-width: 100px;
+    height: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	
+	}
+	/**/
+	}
+li{
+	
+	min-width: 120px;
+	border-bottom: 1px dashed darkgray;
+	font-size: 1.3em;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 2em;
+	display: flex;
+	display: block;
+}
+
+#copy {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	float: left;
+}
+
+
+article p {
+	color:  #aba4a3;
+}
+
+.con {
+	display: inblock;
+	max-height: 450px;
+	max-width: 500px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	
+	
+}

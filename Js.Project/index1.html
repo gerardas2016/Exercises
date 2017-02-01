@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js_project</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link href= "style1.css" rel="stylesheet" type="text/css"> 
+	<script src="Jsscript.js" rel="stylesheet" type="text/javascript" ></script>
+
+</head>
+<body>
+	<main>
+		<header>
+		<img class="logo" src= "images/logo1.png" height= "200" >
+			
+		
+		
+		
+			<nav>
+				<ul class="menu">
+					<li  id="copy1" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()" > <a href="index1.html">Home</a></li> 
+					<li  id="copy2" onmouseover="mouseEnter()" onmouseleave="mouseLeave()"> <a href="portrait1.html">Portraits</a></li> 
+					<li  id="copy3" onmouseover="mouseEnter()" onmouseleave="mouseLeave()"> <a href="contact1.html">Contact</a></li>
+					<li  id="copy5" onmouseover="mouseEnter()" onmouseleave="mouseLeave()" onclick="birth()"> <a href="#"> Nude</a></li>
+					
+					<li  id="copy4" onmouseover="mouseEnter()" onmouseleave="mouseLeave()"onclick="password()" > <a href="#"> Admin</a></li>
+					
+				</ul>
+			</nav>
+			
+			</header>
+			
+			
+			<article>
+					   <div class="mainpic" style="max-width:400px">
+					  <img class="mySlides" src="images/3.jpg" style="width:100%">
+					  <img class="mySlides" src="images/2.jpg" style="width:100%">
+					  <img class="mySlides" src="images/1.jpg" style="width:100%">
+					  
+					  <script >
+							var myIndex = 0;
+							carousel();
+					/*istraukia po viena nuotrauka pagal indeksa*/
+							function carousel() {
+								var i;
+								var x = document.getElementsByClassName("mySlides");
+								for (i = 0; i < x.length; i++) {
+								   x[i].style.display = "none";  
+								}
+								/* naudojamas, keist foto, kas 4s*/
+								myIndex++;
+								if (myIndex > x.length) {myIndex = 1}    
+								x[myIndex-1].style.display = "block";  
+								setTimeout(carousel, 4000); // Change image every 2 seconds
+							}
+				
+					</script>
+				</div>
+			</article>
+			
+			<footer>
+			<div class="rss">
+				<a href="#" class="big"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/1.png" alt="picture" width="24" height="24" /></a> 
+				<a href="#" class="big"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/2.png" alt="picture" width="24" height="24" /></a> 
+				<a href="#" class="big"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/3.png" alt="picture" width="24" height="24" /></a> 
+				<a href="#" class="big"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="images/rss_4.gif" alt="picture" width="24" height="24" /></a>
+
+			</div>
+		
+			<div id="copy" onmouseover="mouseEnter()" onmouseleave="mouseLeave()" >
+			<p>&copy Gerardas Butkevičius 2016</p>
+			
+			
+			<div>
+		</footer>
+		
+	</main>
+</body>
