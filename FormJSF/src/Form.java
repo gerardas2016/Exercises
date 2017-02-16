@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.event.ValueChangeEvent;
@@ -11,6 +13,7 @@ public class Form {
 	private String surname;
 	private String countryCode;
 	private String email;
+	private String listString = "";
 	private String [] list;
 	private String phone;
 	private String gender;
@@ -22,6 +25,15 @@ public class Form {
 	
 	
 	
+	public String getListString() {
+		if ( list==null){
+			return listString;
+		}
+		return Arrays.toString(list);
+	}
+	public void setListString(String listString) {
+		this.listString = listString;
+	}
 	public String getGender() {
 		return gender;
 	}

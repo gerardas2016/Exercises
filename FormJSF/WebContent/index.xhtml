@@ -16,9 +16,28 @@
        
 
 		     <h:form>
-		         First name: <h:inputText id="firstName" value ="#{firstName}" />
+				 <h:outputLabel  value="First name: "/> 
+		         <h:inputText id="firstName"
+		             required="true"
+					 requiredMessage="Enter your name"
+					 validatorMessage="Name must be from 1 to 10 chars"
+		             value ="#{form.name}" >
+		             <f:validateLength minimum="1" maximum="10"/>
+		          </h:inputText>
+		             <h:message for="firstName" style="color:red"/>
+		           
+		             
 		         <br/><br/>
-		         Last name: <h:inputText id="lastName" value ="#{lastName}" />
+		
+		         <h:outputLabel  value="Last name: "/> 
+		         <h:inputText id="lastName" 
+		             required="true"
+					 requiredMessage="Enter your surname"
+					 validatorMessage="Surname must be from 1 to 10 chars"
+		             value ="#{form.surname}" >
+		              <f:validateLength minimum="1" maximum="10"/>
+		           </h:inputText>
+		              <h:message for="lastName" style="color:red"/>
 		         <br /><br/>
 		         
 		     </h:form>
@@ -95,6 +114,21 @@
 			
 		 </h:panelGrid>
     </h:form>
+    
+    
+<!-- Output -->    
+    #{form.listString}
+    <br/>
+    #{form.name}
+    <br/>
+    #{form.surname}
+    <br/>
+    #{form.countryCode} #{form.phone}
+    <br/>
+    #{form.gender}
+    
+    
+    
     
     
    </h:body>
