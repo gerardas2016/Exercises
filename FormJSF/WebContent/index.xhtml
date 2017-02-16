@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+ <html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+  	xmlns:f="http://xmlns.jcp.org/jsf/core"
+  	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+   <title>Student Registration Form</title>
+
+</h:head>
+<h:body>
+
+ <h:form>
+       <h:panelGrid style="border:2px solid black">
+       
+
+		     <h:form>
+		         First name: <h:inputText id="firstName" value ="#{firstName}" />
+		         <br/><br/>
+		         Last name: <h:inputText id="lastName" value ="#{lastName}" />
+		         <br /><br/>
+		         
+		     </h:form>
+		
+			<h:panelGrid columns="2"  width="100%">
+				<h:panelGroup>
+					<h:outputLabel  value="Country: "/> 
+<!--On action listener --> 
+					 <h:selectOneMenu value="#{form.countryCode}" 
+					 id="country"
+					 required="true"
+					 requiredMessage="Select your Country"
+					 onchange="submit()"
+					 valueChangeListener="#{form.onSelectCountry}">
+				        <f:selectItem itemValue="+370" itemLabel="Lithuania"/>
+				        <f:selectItem itemValue="+49" itemLabel="Germany"/>
+				        <f:selectItem itemValue="+7" itemLabel="Russia"/>
+				        <f:selectItem itemValue="+34" itemLabel="Spain"/>
+				        
+				      
+			        </h:selectOneMenu> 
+			        
+				</h:panelGroup>
+				
+				
+				
+				<h:panelGroup>
+					<h:outputLabel value="phone: "/> 
+					<h:outputLabel style="color:blue" value=" #{form.countryCode}">  </h:outputLabel>
+					
+					
+					
+					
+<!-- Phone -->	
+					<h:inputText id="phone" 
+								 required="true"
+								 requiredMessage="Phone is required"
+								 validatorMessage="Number must have from 6 to 10 numbers  use only numbers "
+								 
+					             value ="#{form.phone}" >
+					<f:validateLength minimum="6" maximum="10"/>
+					<f:validateLongRange/>
+					
+					</h:inputText>
+					
+					
+					
+					<h:message for="phone" style="color:red"/>
+					<h:message for="country" style="color:red"/>
+			        
+				</h:panelGroup>
+				
+				
+				
+			<h:outputLabel  value="Select language: "/> 
+			<br/>
+		<h:selectManyListbox value="#{form.list}">
+        <f:selectItem itemValue="Labas" itemLabel="Lithuanian"/>
+        <f:selectItem itemValue="Guten tag" itemLabel="German"/>
+        <f:selectItem itemValue="Zdravstvuyte" itemLabel="Russian"/>
+        <f:selectItem itemValue="Hola" itemLabel="Spanish"/>
+        </h:selectManyListbox>
+        <br/>
+        
+       <h:outputLabel  value="Select gender "/> 
+         <h:selectOneRadio value="#{form.gender}">
+	        <f:selectItem itemValue="Male" itemLabel="Male"/>
+	        <f:selectItem itemValue="Female" itemLabel="Female"/>
+	        <f:selectItem itemValue="Other" itemLabel="Other"/>
+        </h:selectOneRadio>
+				
+			</h:panelGrid>
+			<h:commandButton value="Submit" />
+			
+		 </h:panelGrid>
+    </h:form>
+    
+    
+   </h:body>
+</html>
