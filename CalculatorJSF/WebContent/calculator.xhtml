@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+ <html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+  	xmlns:f="http://xmlns.jcp.org/jsf/core"
+  	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+   <title>Basic calculator</title>
+
+</h:head>
+<h:body>
+
+	<h:form>
+<!-- Enter 2 numbers -->
+	  <h:panelGrid style="border:2px solid black">
+	  	<h:panelGrid columns="2"  width="100%">
+		  	<h:panelGroup>
+		  		<h:outputLabel  value="Enter first num: "/> 
+		  		
+		  		 <h:inputText class="field" 
+		  		 id ="firstNum"
+		  		 required="true"
+				 requiredMessage="First number is required "
+		  		 value="#{calculator.number1}">
+		         <f:validateDoubleRange/>
+		         </h:inputText>
+		    </h:panelGroup>
+		    <h:panelGroup>
+		  		<h:outputLabel  value="Enter second num: "/> 
+		  		
+		  		 <h:inputText class="field" 
+		  		 id ="secondNum"
+		  		 required="true"
+				 requiredMessage="Second number is required "
+		  		 value="#{calculator.number2}">
+		         <f:validateDoubleRange/>  
+		         </h:inputText>
+		    </h:panelGroup>
+		   </h:panelGrid>
+<!-- Buttons -->
+		    <h:panelGrid columns="4"  width="100%">
+			  	<h:panelGroup>
+			  		 <h:commandButton class="button" value="Plus" action="#{calculator.add()}"/>
+			    </h:panelGroup>
+		        <h:panelGroup>
+			  		 <h:commandButton class="button" value="Minus" action="#{calculator.substract()}"/>
+			    </h:panelGroup>
+			    <h:panelGroup>
+			  		 <h:commandButton class="button" value="Divide" action="#{calculator.divide()}"/>
+			    </h:panelGroup>
+		         <h:panelGroup>
+			  		 <h:commandButton class="button" value="Multiply" action="#{calculator.multiply()}"/>
+			    </h:panelGroup>
+
+		    </h:panelGrid>
+<!-- Result -->
+			<h:panelGrid columns="1" border="1" width="100%">
+				<h:panelGroup >
+					<h:outputLabel  value="Result: "/> 
+				    <h:inputText class="field" value="#{calculator.result}"/>
+				</h:panelGroup>
+			  </h:panelGrid>
+	  </h:panelGrid>
+	</h:form>
+	
+<!-- Error info -->
+	<h:message for="firstNum" style="color:red"/>
+    <h:message for="secondNum" style="color:red"/>
+   </h:body>
+</html>
